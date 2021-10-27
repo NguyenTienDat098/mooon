@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/music.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/responsive.css">
+    <title>MoonChill</title>
+    <style>
+        .swiper {
+            width: 100%;
+            padding-top: 50px;
+            padding-bottom: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+        
+        .swiper-slide {
+            position: relative;
+            background-position: center;
+            background-size: cover;
+            width: 300px;
+            height: 400px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 0 10px;
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 0 1rem;
+            border-radius: 10px;
+            border-top: 2px solid rgba(255, 255, 255, 0.8);
+            border-left: 2px solid rgba(255, 255, 255, 0.8);
+        }
+        
+        .swiper-slide:hover {
+            background-color: rgba(255, 255, 255, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <div class="menu__mobile">
+        <div class="view__menu__mobile">
+            <ul class="list__item">
+                <li class="menu__item"><a href="#hearder"><ion-icon name="home"></ion-icon></a></li>
+                <li class="menu__item"><a href="https://www.facebook.com/profile.php?id=100057834677774"><ion-icon name="logo-facebook"></ion-icon></a></li>
+                <li class="menu__item"><a href="#music"><ion-icon name="musical-notes"></ion-icon></li>
+                <li class="menu__item"><a href="../MoonChill-main/index.html"><ion-icon name="log-out"></ion-icon></a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="showtime">
+        <div class="view__time">
+            <h2 class="hour time">00</h2>
+            <h2 class="minutes time">00</h2>
+            <h2 class="second time">00</h2>
+        </div>
+    </div>
+    <header id="header">
+        <a href="" class="logo">CHILL</a>
+        <ion-icon name="menu-outline" class="iconmenu__mobile"></ion-icon>
+        <ul>
+            <li><a class="active" href="#header">HOME</a></li>
+            <li><a href="https://www.facebook.com/profile.php?id=100057834677774">ABOUT</a></li>
+            <li><a href="#music">WORK</a></li>
+            <li>
+                <a href="#footer">CONTACT</a>
+            </li>
+        </ul>
+    </header>
+    <section>
+        <img src="imgs/stars.png" alt="" class="stars">
+        <img src="imgs/moon.png" alt="" class="moon">
+        <img src="imgs/mountains_behind.png" alt="" class="mountains_behind">
+        <h2 class="text">MOON LIGHT</h2>
+        <button href="#" class="btn" onclick="showTime()">Show Time</button>
+        <img src="imgs/mountains_front.png" alt="" class="mountains_front">
+    </section>
+    <div class="sec" id="music">
+        <h2 class="title__sec">Music Chill</h2>
+        <h3 class="note"> Please wear headphones for the best experience</h3>
+        <div class="content__music">
+            <div class="content">
+                <div class="content__img">
+                    <img src="imgs/chilll1.jpg" alt="img">
+                </div>
+                <div class="content__mus marginleft">
+                    <h2 class="title__mus">Music Coding</h2>
+                    <audio class="Audiplay" controls>
+                        <source src="mp3/msiccoding.mp3">
+                        </audio>
+                        <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores optio ducimus, fugiat laboriosam et cum fugit perspiciatis hic officiis, unde voluptatum velit facere in minus quae, iusto soluta tempore delectus!
+                        </p>
+                    </div>
+                </div>
+                <div class="content content2">
+                    <div class="content__mus marginright">
+                        <h2 class="title__mus">Best Music For Hacking</h2>
+                        <audio class="Audiplay" controls>
+                            <source src="mp3/haker.mp3">
+                            </audio>
+                            <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores optio ducimus, fugiat laboriosam et cum fugit perspiciatis hic officiis, unde voluptatum velit facere in minus quae, iusto soluta tempore delectus!
+                            </p>
+                        </div>
+                        <div class="content__img">
+                            <img src="imgs/chill4.jpg" alt="img">
+                        </div>
+                    </div>
+                    <div class="content">
+                        <div class="content__img">
+                            <img src="imgs/chill3.jpg" alt="img">
+                        </div>
+                        <div class="content__mus marginleft">
+                            <h2 class="title__mus">Best Lofi Music For Learning</h2>
+                            <audio class="Audiplay" controls>
+                                <source src="mp3/musicstudy.mp3">
+                                </audio>
+                                <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores optio ducimus, fugiat laboriosam et cum fugit perspiciatis hic officiis, unde voluptatum velit facere in minus quae, iusto soluta tempore delectus!
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="music">
+                    <h2>My Favorite Playlist</h2>
+                    <div class="main">
+                        <div class="left">
+                            <!-- song img -->
+                            <!-- <img src="" alt="" class="track__img"> -->
+                            <div class="volume">
+                                <p class="volume__show">90</p>
+                                <ion-icon name="volume-low-outline" class="iconvolume" onclick="MuteSound()">
+                                </ion-icon>
+                                <input type="range" class="range" min="0" max="100" value="90" onchange="VolumeChange()">
+                            </div>
+                            <div class="view__right__audio">
+                                <div class="view__audio"></div>
+
+                            </div>
+                        </div>
+                        <div class="right">
+                            <div class="viewplaymusic">
+                                <div class="show__song__no">
+                                    <p class="present">1</p>
+                                    <p>/</p>
+                                    <p class="total">5</p>
+                                </div>
+                                <p class="title">Title.mp3</p>
+
+                                <div class="middle">
+                                    <button class="pre" onclick="PreviousSong()">
+                                        <ion-icon name="chevron-back-outline"></ion-icon>
+                                    </button>
+                                    <button onclick="Justplay()" class="play">
+                                        <ion-icon name="play-outline"></ion-icon>
+                                    </button>
+                                    <button onclick="NextSong()" class="next">
+                                        <ion-icon name="chevron-forward-outline"></ion-icon>
+                                    </button>
+                                </div>
+                                <div class="duration">
+                                    <input type="range" min="0" max="100" value="0" class="duration__slider" onchange="ChangeDuration()">
+                                </div>
+                                <button class="auto" onclick="AutoSwicth()">Auto play <ion-icon
+                                    name="ellipse-outline" class="iconauto">
+                                </ion-icon> </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer" id="footer">
+                    <ul class="list">
+                        <li class="item">
+                            <a href="https://www.facebook.com/profile.php?id=100057834677774" class="link">
+                                <ion-icon class="iconsocial facebook" name="logo-facebook"></ion-icon>
+                            </a>
+                            <li class="item">
+                                <a href="https://www.youtube.com/" class="link">
+                                    <ion-icon class="iconsocial youtube" name="logo-youtube"></ion-icon>
+                                </a>
+                            </li>
+                            <li class="item">
+                                <a href="https://www.instagram.com/" class="link">
+                                    <ion-icon class="iconsocial instagram" name="logo-instagram"></ion-icon>
+                                </a>
+                            </li>
+                            <li class="item">
+                                <a href="https://github.com/" class="link">
+                                    <ion-icon class="iconsocial github" name="logo-github"></ion-icon>
+                                </a>
+                            </li>
+                        </li>
+                    </ul>
+                </div>
+            </body>
+            <script src="javascript/music.js"></script>
+            <script src="https://cdn.jsdelivr.net/gh/sh20raj/AudiPlay/audiplay.min.js"></script>
+            <!--Here is the JavaScript Library-->
+            <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+            <script src="javascript/index.js"></script>
+            <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+            <script src="javascript/time.js"></script>
+            <!-- Initialize Swiper -->
+            <script>
+                var swiper = new Swiper(".mySwiper", {
+                    effect: "coverflow",
+                    grabCursor: true,
+                    centeredSlides: true,
+                    slidesPerView: "auto",
+                    coverflowEffect: {
+                        rotate: 30,
+                        stretch: 0,
+                        depth: 30,
+                        modifier: 1,
+                        slideShadows: true,
+                    },
+// loop: true
+});
+</script>
+<script>
+    let star = document.querySelector('.stars');
+    let moon = document.querySelector('.moon');
+    let mountainsBehind = document.querySelector('.mountains_behind');
+    let mountainsFront = document.querySelector('.mountains_front');
+    let text = document.querySelector('.text');
+    let btn = document.querySelector('.btn');
+    let header = document.querySelector('header');
+    window.addEventListener("scroll", function() {
+        let value = window.scrollY;
+        star.style.left = value * 0.25 + "px";
+        moon.style.top = value * 1.05 + "px";
+        mountainsBehind.style.top = value * 0.5 + "px";
+        mountainsFront.style.top = value * 0 + "px";
+        text.style.marginRight = value * 4 + "px";
+        text.style.marginTop = value * 1.5 + "px";
+        btn.style.marginTop = value * 1.5 + "px";
+        header.style.top = value * 0.5 + "px";
+    })
+</script>
+</html>

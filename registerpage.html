@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="css/registerpage.css">
+	<link rel="stylesheet" type="text/css" href="css/responsivelogin.css">
+	<title>Document</title>
+</head>
+<body>
+	<div class="registerpage">
+		<div class="imgmoon">
+		</div>
+		<form method="POST" action="php/register.php">
+			<h3 class="register__title">REGISTER NOW</h3>
+			<div class="viewregister">
+				<input type="username" name="username" placeholder=" " class="username">
+				<span class="titleusername">Username</span>
+			</div>
+			<div class="viewregister">
+				<input class="email" type="email" name="email" placeholder=" "></input>
+				<span class="titlepassword">Email</span>
+			</div>
+			<div class="viewregister">
+				<input class="password" type="password" name="password" placeholder=" "></input>
+				<span class="titlepassword">Password</span>
+			</div>
+			<input type="submit" name="register" value="register">
+			<p class="have_account">You have a <a href="index.html">Acount</a></p>
+		</form>
+	</div>
+</body>
+</html>

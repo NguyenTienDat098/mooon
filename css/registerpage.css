@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap');
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body{
+	font-size: 16px;
+	font-family: 'Open Sans', sans-serif;
+	background-image: url('../imgs/bgstsr.gif');
+	background-size: cover;
+	background-repeat: no-repeat;
+
+}
+.registerpage{
+	width:100%;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	
+}
+
+.registerpage form{
+	width: 500px;
+	height: 500px;
+	display:flex;
+	align-items: center;
+	flex-direction: column;
+	background-image: url('../imgs/moon2.png') ;
+	background-size: 100% auto;
+	background-repeat: no-repeat;
+	position: relative;
+	border-radius: 50%;
+	overflow: hidden; 
+	animation: moonmain 1.5s ease;
+	padding: 1rem #fdcb6e;
+
+}
+.imgmoon{
+	position: fixed;
+	width: 60px;
+	height: 60px;
+	background-image: url('../imgs/moonpageremove.png');
+	background-size: cover;
+	top:25%;
+	left:50%;
+	z-index: 99;
+	animation: moonmove 10s ease infinite;
+	
+}
+@keyframes moonmain {
+	from{
+		opacity: 0;
+		top: -200%;
+	}
+	to{
+		opacity: 1;
+		top: 0;
+	}
+	
+}
+@keyframes moonfadeout{
+	from{
+		opacity: 0;
+	}
+	to{
+		opacity: 1;
+	}
+}
+@keyframes moonmove{
+	0%{
+		top:15%;
+		left:0%;
+	}
+	10%{
+
+	}
+	20%{
+		top:15%;
+		left:10%;
+	}
+	30%{
+		top:15%;
+		left:15%;
+	}
+	40%{
+		top:15%;
+		left:30%;
+	}
+	50%{
+		top:15%;
+		left:40%;
+	}
+	60%{
+		top:15%;
+		left:50%;
+	}
+	70%{
+		top:15%;
+		left:60%;
+	}
+	80%{
+		top:15%;
+		left:70%;
+	}
+	100%{
+		top:15%;
+		left:100%;
+	}
+}
+h3{
+	margin-top: 5rem;
+}
+h3,
+input{
+	margin-bottom: 1.5rem;
+}
+.viewregister{
+	position: relative;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content:center;
+	height: 60px;
+}
+input[name = "password"],
+input[name = "email"],
+input[name = "username"]{
+	width: 60%;
+	height: 40px;
+	border-radius:10px;
+	border:none;
+	outline:none;
+	padding: 10px 1rem;
+	transition: 0.25s linear;
+	font-style: italic;
+}
+input:focus{
+	background-color: #ffeaa7;
+	box-shadow: 5px 5px 10px rgba(0,0,0,0.2);
+	color:#2d3436;
+
+}
+input:not(:placeholder-shown) + span,
+input:focus + span{
+	top: -22px;
+	left: 8rem;
+}
+span{
+	position: absolute;
+	top: 6px;
+	left: 7rem;
+	pointer-events: none;
+	user-select: none;
+	transition: 0.25s linear;
+}
+input[name = "register"]{
+	width: 100px;
+	height: 40px;
+	border:none;
+	border-radius: 1rem;
+	font-weight: bold;
+	background-color: #fff;
+	cursor: pointer;
+	transition: 0.25s linear;
+}
+input[name = "register"]:hover{
+	animation: button 1s linear infinite;
+	box-shadow: 5px 5px 10px rgba(0,0,0,0.2);
+
+}
+@keyframes button{
+	from {
+		background:linear-gradient(to right , #fdcb6e,#ffeaa7);
+
+	}
+	to{
+		background:linear-gradient(to right , #ffeaa7,#fdcb6e);
+
+	}
+}

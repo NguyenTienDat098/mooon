@@ -1,0 +1,40 @@
+@media (max-width: 350px) {
+	.loginpage form {
+		width: 100%;
+		height: 60%;
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		background-image: url(../imgs/moon2.png);
+		background-size: cover;
+		background-repeat: no-repeat;
+		position: relative;
+		border-radius: 50%;
+		overflow: hidden;
+		animation: moonmain 1.5s ease;
+		padding: 1rem #fdcb6e;
+	}
+	.have_account{
+		color: #fff;
+		margin-top: 1rem;
+	}
+	.have_account a{
+		color: #55efc4;
+	}
+	.viewregister {
+		height: 55px;
+	}
+	input[name = "password"],
+	input[name = "email"],
+	input[name = "username"] {
+		width: 55%;
+		height: 30px;
+	}
+	.register__title{
+		margin-top:3rem;
+		
+	}
+
+
+
+}

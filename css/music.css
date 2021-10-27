@@ -1,0 +1,345 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&family=Pacifico&display=swap');
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppinsdisplay=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.music {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #1c0522;
+    position: relative;
+    flex-direction: column;
+}
+
+.main {
+    overflow: hidden; 
+    position: relative;
+    height: 80%;
+    width: 80%;
+    min-height: 20rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /*flex-direction: column;*/
+    background-image: url('../imgs/ms6.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 1rem;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+}
+
+.main button {
+    padding: 10px 12px;
+    margin: 0 10px;
+}
+
+.music h2 {
+    font-size: 3rem;
+    color: #fff;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1.5rem;
+    letter-spacing: 1rem;
+    margin-bottom: 3rem;font-family: 'Irish Grover', cursive;
+}
+
+.right {
+    position: relative;
+    height: 100%;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+.viewplaymusic{
+    display: flex;
+    align-items:center;
+    justify-content:space-between;
+    width: 80%;
+    border-radius: 1rem;
+    flex-direction: column;
+    background-color: #a29bfe;
+
+}
+
+
+.left {
+    position: relative;
+    height: 100%;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.view__right__audio{
+    /*background:linear-gradient(130deg,#74b9ff,#e66767);*/
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    background-size: 200%;
+
+}
+.view__right__audio.animation{
+    animation : rotate 5s linear infinite, circle 5s linear infinite;
+}
+@keyframes rotate{
+    from {
+        -webkit-transform: rotate(0deg);
+    }
+    to {
+        -webkit-transform: rotate(359deg);
+    }
+}
+@keyframes circle{
+    25%{
+        background-position: left bottom;
+    }
+    50%{
+        background-position: right bottom;
+
+    }
+    75%{
+        background-position: right top;
+
+
+    }
+    100%{
+    background-position: left top;
+
+    }
+}
+.view__audio{
+    width: 300px;
+    height: 300px;
+    background: url('../imgs/moon2.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    z-index: 99;
+    border-radius: 50%;
+
+}
+
+/* song img */
+
+.left img {
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    box-shadow: 1px 0px 20px 12px rgba(240, 240, 240, 0.2);
+}
+
+input[type="range"] {
+    -webkit-appearance: none;
+    width: 50%;
+    outline: none;
+    height: 2px;
+    margin: 0 15px;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 20px;
+    width: 20px;
+    background: #6c5ce7;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.right input[type="range"] {
+    width: 40%;
+    margin-top: 3rem;
+}
+.left .volume {
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    flex-direction: column;
+}
+
+.left .volume .volume__show {
+    color: #fff;
+    width: 25%;
+    text-align: center;
+}
+
+.left .volume .iconvolume {
+    width: 20px;
+    height: 25px;
+    transform: translateY(15px);
+    cursor: pointer;
+    padding: 8px 12px;
+    background-color: #6c5ce7;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 15%;
+}
+
+.left .volume ion-icon:hover {
+    background-color: rgba(245, 245, 245, 0.1);
+}
+
+.volume__show {
+    padding: 8px 12px;
+    margin: 0 5px 0 0;
+    background-color: rgba(245, 245, 245, 0.1);
+}
+
+.right .middle {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+}
+
+.right .middle ion-icon {
+    font-size: 1.2rem;
+}
+
+.right .middle button {
+    border: none;
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    outline: none;
+    transition: 0.5s;
+    background: rgba(245, 245, 245, 0.1);
+}
+
+.right .middle .play {
+    background-color: #6c5ce7;
+}
+
+.right .middle .play:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+.right .title {
+    position: absolute;
+    top: 0.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+    font-size: 35px;
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    font-family: 'Pacifico', cursive;
+
+}
+
+.right .artist {
+    position: absolute;
+    top: 110px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-transform: capitalize;
+    color: #6c5ce7;
+    font-size: 18px;
+    width: 100%;
+    text-align: center;
+}
+
+.right .duration {
+    position: absolute;
+    bottom: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 20px;
+    margin-top: 40px;
+}
+
+.right .duration p {
+    color: #fff;
+    font-size: 15px;
+    margin-left: 20px;
+}
+
+.right .auto {
+    /*font-size: 18px;*/
+    font-weight:bold;
+    cursor: pointer;
+    margin: 20px;
+    border: none;
+    padding: 10px 14px;
+    color: #fff;
+    background: #a29bfe;
+    outline: none;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.right .auto .iconauto {
+    margin-left: 8px;
+    font-size: 20px;
+}
+
+.play {
+    background: #6c5ce7;
+}
+
+.right button:hover {
+    background: #6c5ce7;
+}
+
+.right ion-icon::before {
+    color: #fff;
+    font-size: 20px;
+}
+
+.right .show__song__no {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 50px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 12px;
+    color: #fff;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.right .show__song__no p:nth-child(2) {
+    margin: 0 5px;
+}
